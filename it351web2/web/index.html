@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Database Lookup</title>
+        <style type="text/css">
+            body {
+            color: #F1BE2B;
+            background-color: #333131 }
+            
+            input.button {
+                position: relative;
+                left: 750px;
+                top: 500px;
+                z-index: 0;
+            }
+            
+            input.text1{
+                position: absolute;
+                left: 880px;
+                top: 510px;
+                z-index: 0;
+            }
+            
+            input.text2{
+                position: absolute;
+                left: 785px;
+                top: 550px;
+                z-index: 0;
+            }
+            
+            h4.one {
+                position: absolute;
+                left: 858px;
+                top: 470px;
+                z-index: 0;
+            }
+            
+            h4.two {
+                position: absolute;
+                left: 855px;
+                top: 510px;
+                z-index: 0;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="database.jsp" method="POST">
+            <h4 class="one">Record Number</h4>
+         <input class="text1" type="text" name="rowIndicatorMain" size="5" value="<%= it351web.getRowIndicatorMain() %>"/> 
+         <br>
+         <br>
+            <h4 class="two">Customer Record</h4>
+         <input class="text2" type="text" name="customerRecord" size="40" value="<%= it351web.getCustomerRecord() %>"/>
+         <br>
+         <br>
+         <input class="button" type="submit" name="button" value="Previous"/>
+         <input class="button" type="submit" name="button" value="Next"/>
+         <input class="button" type="submit" name="button" value="Update"/>
+         <input class="button" type="submit" name="button" value="Create"/>
+         <input class="button" type="submit" name="button" value="Delete"/>
+        </form>
+    </body>
+</html>
